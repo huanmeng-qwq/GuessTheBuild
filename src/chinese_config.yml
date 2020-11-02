@@ -1,0 +1,160 @@
+database:
+  type: sqlite #sqlite 或 mysql
+  ip: localhost #IP
+  port: 3306 #端口
+  username: root #用户名
+  password: password #密码
+  database: GuessTheBuild #数据库名称
+lobby:
+  - lobby#1 #你的服务器大厅BC名字
+prefix: §e§l建筑猜猜乐 >>
+message: #颜色符号 如果要加前缀就加上     (prefix)
+  only_player: (prefix) §c控制台不能使用此指令!
+  Bad_parameter: §c错误参数 /%s %s
+  no_permission: §fUnknown command. Type \"/help\" for help.
+  name: §f§l建筑猜猜乐
+  join: §e%s§e 加入了游戏(§b%s§e/§b%s)
+  quit: §e%s§e 离开了游戏.
+  command:
+    setup:
+      help:
+        - §e/%s setlobby §f- §7设置你当前的位置为等待大厅
+        - §e/%s setmaxplayer [int] §f- §7设置最大人数
+        - §e/%s addregion §f- §7添加区域,当进入服务器是你会获取一个钻石斧,左右键选取区域中间点是你的位置
+        - §e/%s addnpc §f- §7添加NPC位置可以多个 游戏中手持物品右键NPC会跟换地板
+        - §e/%s floor <int> §f- §7地板的y轴 用于设置地板方块的
+        - §e/%s addtheme <dif> <theme> §f- §7添加主题 dif是难度 theme是主题名字可以随便输入
+        - §a主题 难度
+        - §aEASY
+        - §5MEDIUM
+        - §dHARD
+      setlobby:
+        success: §a设置成功
+      setmaxplayer:
+        success: §a设置成功 最大人数 %s
+      addregion:
+        unknow: §c请先选择区域!
+        success: §a设置成功 %s
+      info:
+        region: §b%s 区域
+        theme: §b%s 主题
+        themes: §a  %s
+      floor:
+        success: §e设置地板高度为 %s
+      addnpc:
+        success: §e成功添加NPC位置! \#%s
+      addtheme:
+        unknow: §c未知主题难度!
+        success: §a添加主题成功! \#%s
+    forcestart:
+      unknow: §c未发现游戏实例,请设置完后输入 /stop重启服务器.
+      already: §c发现的游戏实例已经开始了.
+  end:
+    winner: §f胜利者
+    one: §e第一名 §7- %s
+    two: §6第二名 §7- %s
+    three: §c第三名 §7- %s
+    you_score: §6你的积分§e %s
+  npc:
+    type: VILLAGER
+    name: §b修改地板!
+    message: §a设置成功!
+  item:
+    name: §e更多功能§7(§a右键单击§7)
+  forcestart:
+    name: §e强制开始§7(§a右键单击§7)
+  leave_bed:
+    name: §e退出§7(§a右键单击§7)
+  lobby:
+    startgamein: §e游戏将在 §b%s 后开始
+  round:
+    correct: §e%s 猜对了主题!
+    builder: §e建筑师是 %s
+    rounds: §e回合 §b%s§e/§b%s
+    info: §e主题是 %s
+    title:
+      Selecting: §e选择中
+      end: §e主题是§a %s §e!
+      surplus: §b%s §e秒
+      show: §e主题是
+      show_sub: §a%s§e!
+      offline: 玩家离线,跳过!
+      actionBar: §b主题是§e %s
+      start: §e开始猜测吧！
+      theme_length: §e这个主题有 §a%s 个字
+      theme: §e真确的主题 §b%s
+theme:
+  Difficulty:
+    EASY: 简单
+    MEDIUM: 中等
+    HARD: 困难
+rank:
+  0: §f初来乍到
+  1: §8未经雕琢
+  2: §e初窥门径
+  3: §a学有所成
+  4: §d驾轻就熟
+  5: §9历练老成
+  6: §2技艺精湛
+  7: §3炉火纯青
+  8: §c技惊四座
+  9: §1闻名于世
+  10: §c名垂青史
+inventory:
+  title: 更多功能
+  change: §e更改
+  success: §a设置成功!
+  back: §a返回
+  back1: §7至主菜单
+  close: §c关闭
+  weather:
+    name: §a天气
+    title: 领地天气
+    set: 设置世界天气为 %s
+    weather:
+      thunder: 闪电
+      downfall: 下雨
+      snow: 雪
+      clear: 无
+  time:
+    name: §a时间
+    title: 领地时间
+    time:
+      before_dawn: 凌晨
+      morning: 上午
+      noon: 下午
+      evening: 傍晚
+      night: 夜晚
+  biome:
+    name: §a群系
+    title: 领地群系
+    biome:
+      plains: 平原
+      mesa: 平顶山
+      ocean: 海洋
+      desert: 沙漠
+      forest: 森林
+      jungle: 热带森林
+      ice_plains: 冰原
+      swampland: 沼泽
+      savanna: 金合欢
+  select:
+    title: 选择一个主题
+    Difficulty: 难度
+  block: §7更改地板
+  banner: 旗帜制作器
+scoreboard:
+  title: §e§l建筑猜猜乐
+  builder: §f建筑师
+  startIn: §f将在§a %s 后开始
+  time: '§f时间: %s'
+  theme: §f主题
+  select: 请选择
+  endLine: §eSpigotMC.org
+  wait:
+    player: '&f玩家: &a%s/%s'
+    start: §f将在 §a%s 秒后开始
+    start1: 以允许更多
+    start2: 玩家加入
+    countdown: 倒计时 §a%s
+    mustPlayer: 需要玩家 §a %s

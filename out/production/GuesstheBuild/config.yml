@@ -1,0 +1,160 @@
+database:
+  type: sqlite #sqlite or mysql
+  ip: localhost #ip
+  port: 3306 #port
+  username: root #User
+  password: password #Password
+  database: GuessTheBuild #Database
+lobby:
+  - lobby#1 #You server Lobby BungeeCord name
+prefix: §e§lGuessTheBuild >>
+message: #Color char: &  if use Prefix: !prefix
+  only_player: (prefix) §cConsole cannot use this command!
+  Bad_parameter: §cBad parameter /%s %s
+  no_permission: §fUnknown command. Type \"/help\" for help.
+  name: §f§lGuessTheBuild
+  join: §e%s§e Join the game(§b%s§e/§b%s)
+  quit: §e%s§e Left.
+  command:
+    setup:
+      help:
+        - §e/%s setlobby §f- §7setWaitLobby Location
+        - §e/%s setmaxplayer §f- §7setMaxPlayer
+        - §e/%s addregion §f- §7add Region
+        - §e/%s addnpc §f- §7addNPC
+        - §e/%s floor <int> §f- §7The Y-axis of the floor
+        - §e/%s addtheme <dif> <theme> §f- §7add Theme
+        - §aTheme Difficultys
+        - §aEASY
+        - §aMEDIUM
+        - §aHARD
+      setlobby:
+        success: §aSet successfully
+      setmaxplayer:
+        success: §aSet successfully MaxPlayer %s
+      addregion:
+        unknow: §cUnKnow Region Set!
+        success: §aSet successfully %s
+      info:
+        region: §b%s Regions
+        theme: §b%s Themes
+        themes: §a  %s
+      floor:
+        success: §eSet Floor Y axis to %s
+      addnpc:
+        success: §eadd NPC successfully! \#%s
+      addtheme:
+        unknow: §cUnKnow Theme Difficulty!
+        success: §aadd Theme successfully! \#%s
+    forcestart:
+      unknow: §cUnknow Game instance,please type /stop to restart server.
+      already: §cGame instance already start.
+  end:
+    winner: §fWiner
+    one: §eNo.1 §7- %s
+    two: §6No.2 §7- %s
+    three: §cNo.3 §7- %s
+    you_score: §6Your Score§e %s
+  npc:
+    type: VILLAGER
+    name: §bChange Floor!
+    message: §aSet successfully!
+  item:
+    name: §eMore addon§7(§aRight Click§7)
+  forcestart:
+    name: §eForce Start§7(§aRight Click§7)
+  leave_bed:
+    name: §eQuit§7(§aRight Click§7)
+  lobby:
+    startgamein: §eStart Game in §b%s
+  round:
+    correct: §e%s Correctly guessed the theme!
+    builder: §eBuilder is %s
+    rounds: §eRound §b%s§e/§b%s
+    info: §eTheme is %s
+    title:
+      Selecting: §eSelecting
+      end: §eTheme is§a %s §e!
+      surplus: §b%s §eseconds
+      show: §eTheme is
+      show_sub: §a%s§e!
+      offline: The Player is Offline,Skip
+      actionBar: §bTheme is§e %s
+      start: §eLet's start guessing
+      theme_length: §eThe Theme length is §a%s
+      theme: §eCorrect Theme is §b%s
+theme:
+  Difficulty:
+    EASY: Easy
+    MEDIUM: Medium
+    HARD: Hard
+rank:
+  0: §f初来乍到
+  1: §8未经雕琢
+  2: §e初窥门径
+  3: §a学有所成
+  4: §d驾轻就熟
+  5: §9历练老成
+  6: §2技艺精湛
+  7: §3炉火纯青
+  8: §c技惊四座
+  9: §1闻名于世
+  10: §c名垂青史
+inventory:
+  title: More function
+  change: §eChange
+  success: §aSet Successfully!
+  back: §aBack
+  back1: §7to Main Menu
+  close: §cClose
+  weather:
+    name: §aWeather
+    title: Region Weater
+    set: Set World Wetaher to %s
+    weather:
+      thunder: Thunder
+      downfall: DownFall
+      snow: Snow
+      clear: None
+  time:
+    name: §aTime
+    title: Region Time
+    time:
+      before_dawn: Before Dawn
+      morning: Morning
+      noon: Noon
+      evening: Evening
+      night: Night
+  biome:
+    name: §aBiome
+    title: Region Biome
+    biome:
+      plains: Plains
+      mesa: Mesa
+      ocean: Ocean
+      desert: Desert
+      forest: Forest
+      jungle: Jungle
+      ice_plains: Ice_Plains
+      swampland: SwampLand
+      savanna: SavaNNA
+  select:
+    title: Select a Theme
+    Difficulty: Difficulty
+  block: §7Change Floor
+  banner: Banner Maker
+scoreboard:
+  title: §e§lGuessTheBuild
+  builder: §fBuilder
+  startIn: §fStart in %s
+  time: '§fTime: %s'
+  theme: §fTheme
+  select: Please Select
+  endLine: §espigotmc.org
+  wait:
+    player: '&fPlayer: &a%s/%s'
+    start: §fStart Game in §a%s
+    start1: To allow more
+    start2: Players join
+    countdown: Count Down %s
+    mustPlayer: Must Player §a
